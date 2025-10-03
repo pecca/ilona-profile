@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import { Container, Box, Alert, Typography } from '@mui/material'
@@ -9,6 +9,11 @@ import Academic from './components/Academic'
 import MediaGallery from './components/MediaGallery'
 import Blog from './components/Blog'
 import Contact from './components/Contact'
+import {
+  initializeAnalytics,
+  trackPageView,
+  trackCoachVisit,
+} from './utils/analytics'
 
 const theme = createTheme({
   palette: {
@@ -28,6 +33,17 @@ const theme = createTheme({
 })
 
 const App: React.FC = () => {
+  useEffect(() => {
+    // Initialize analytics
+    initializeAnalytics()
+
+    // Track initial page view
+    trackPageView(window.location.pathname)
+
+    // Track that this is a coach recruitment page visit
+    trackCoachVisit()
+  }, [])
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />

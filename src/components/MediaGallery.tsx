@@ -22,6 +22,7 @@ import {
   PlayArrow,
   Download,
 } from '@mui/icons-material'
+import { trackVideoPlay, trackImageView } from '../utils/analytics'
 
 const Section = styled(Box)(({ theme }) => ({
   marginBottom: theme.spacing(6),
@@ -184,6 +185,13 @@ const MediaGallery: React.FC = () => {
     media: MediaItem | VideoItem,
     isVideo: boolean = false
   ): void => {
+    // Track analytics based on media type
+    if (isVideo) {
+      trackVideoPlay(media.title)
+    } else {
+      trackImageView(media.title)
+    }
+
     setSelectedMedia({ ...media, isVideo } as SelectedMedia)
     setOpenDialog(true)
   }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   Box,
   Typography,
@@ -28,6 +28,10 @@ import {
   School,
   Download,
 } from '@mui/icons-material'
+import {
+  trackContactFormView,
+  trackContactFormSubmit,
+} from '../utils/analytics'
 
 const Section = styled(Box)(({ theme }) => ({
   marginBottom: theme.spacing(6),
@@ -81,6 +85,11 @@ const Contact: React.FC = () => {
   })
   const [showSuccess, setShowSuccess] = useState<boolean>(false)
 
+  // Track when contact form is viewed
+  useEffect(() => {
+    trackContactFormView()
+  }, [])
+
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ): void => {
@@ -92,6 +101,10 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
+
+    // Track contact form submission
+    trackContactFormSubmit()
+
     // Tässä olisi oikea lomakkeen lähetyslogiikka
     console.log('Form submitted:', formData)
     setShowSuccess(true)
