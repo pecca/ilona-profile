@@ -42,8 +42,8 @@ function Header() {
         <Toolbar disableGutters>
           <ProfileSection>
             <Avatar
-              src="/profile-photo.jpg" // Placeholder - korvataan myöhemmin oikealla kuvalla
-              alt="Ilona"
+              src="/ilona-profile/images/ilonan-profiilikuva.jpg" // Ilonan profilikuva
+              alt="Ilona Mäkelä"
               sx={{ width: 80, height: 80 }}
             />
             <Box>

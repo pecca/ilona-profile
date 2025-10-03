@@ -94,44 +94,30 @@ function MediaGallery() {
   const photos = [
     {
       id: 1,
-      src: '/images/rowing-action-1.jpg',
+      src: '/ilona-profile/images/single-scull_1.jpg',
       title: 'Single Scull Training',
       description: 'Morning training session on the lake',
       category: 'Training',
     },
     {
       id: 2,
-      src: '/images/competition-1.jpg',
+      src: '/ilona-profile/images/single-scull_2.jpg',
       title: 'National Championships 2024',
       description: 'Competing in single scull finals',
       category: 'Competition',
     },
     {
       id: 3,
-      src: '/images/team-photo.jpg',
+      src: '/ilona-profile/images/single-scull_3.jpg',
       title: 'Team Finland',
       description: 'Youth National Team training camp',
       category: 'Team',
     },
     {
       id: 4,
-      src: '/images/rowing-technique.jpg',
+      src: '/ilona-profile/images/single-scull_4.jpg',
       title: 'Technique Focus',
       description: 'Working on stroke technique',
-      category: 'Training',
-    },
-    {
-      id: 5,
-      src: '/images/medal-ceremony.jpg',
-      title: 'Victory Moment',
-      description: 'Regional Championships medal ceremony',
-      category: 'Achievement',
-    },
-    {
-      id: 6,
-      src: '/images/sunrise-training.jpg',
-      title: 'Early Morning Training',
-      description: 'Dedication starts before sunrise',
       category: 'Training',
     },
   ]
@@ -139,8 +125,8 @@ function MediaGallery() {
   const videos = [
     {
       id: 1,
-      src: '/videos/technique-analysis.mp4',
-      thumbnail: '/images/video-thumb-1.jpg',
+      src: '/ilona-profile/videos/technique-analysis.mp4',
+      thumbnail: '/ilona-profile/images/video-thumb-1.jpg',
       title: 'Stroke Technique Analysis',
       description: 'Side view analysis of rowing technique',
       duration: '2:45',
@@ -148,8 +134,8 @@ function MediaGallery() {
     },
     {
       id: 2,
-      src: '/videos/race-footage.mp4',
-      thumbnail: '/images/video-thumb-2.jpg',
+      src: '/ilona-profile/videos/race-footage.mp4',
+      thumbnail: '/ilona-profile/images/video-thumb-2.jpg',
       title: 'Regional Championship Race',
       description: 'Full race footage from winning performance',
       duration: '7:30',
@@ -157,8 +143,8 @@ function MediaGallery() {
     },
     {
       id: 3,
-      src: '/videos/training-montage.mp4',
-      thumbnail: '/images/video-thumb-3.jpg',
+      src: '/ilona-profile/videos/training-montage.mp4',
+      thumbnail: '/ilona-profile/images/video-thumb-3.jpg',
       title: 'Training Highlights',
       description: 'Compilation of training sessions',
       duration: '3:20',
@@ -166,8 +152,8 @@ function MediaGallery() {
     },
     {
       id: 4,
-      src: '/videos/erg-session.mp4',
-      thumbnail: '/images/video-thumb-4.jpg',
+      src: '/ilona-profile/videos/erg-session.mp4',
+      thumbnail: '/ilona-profile/images/video-thumb-4.jpg',
       title: 'Ergometer Training',
       description: '2k erg test performance',
       duration: '8:15',
