@@ -125,39 +125,23 @@ function MediaGallery() {
   const videos = [
     {
       id: 1,
-      src: '/ilona-profile/videos/technique-analysis.mp4',
+      youtubeId: 'https://youtu.be/24BjcbchnUA', // Korvaa tämä oikealla YouTube video ID:llä
       thumbnail: '/ilona-profile/images/video-thumb-1.jpg',
       title: 'Stroke Technique Analysis',
       description: 'Side view analysis of rowing technique',
       duration: '2:45',
       category: 'Technique',
+      isYoutube: true,
     },
     {
       id: 2,
-      src: '/ilona-profile/videos/race-footage.mp4',
+      youtubeId: 'https://youtu.be/OA0CWhY4NV8', // Korvaa tämä oikealla YouTube video ID:llä
       thumbnail: '/ilona-profile/images/video-thumb-2.jpg',
       title: 'Regional Championship Race',
       description: 'Full race footage from winning performance',
       duration: '7:30',
       category: 'Competition',
-    },
-    {
-      id: 3,
-      src: '/ilona-profile/videos/training-montage.mp4',
-      thumbnail: '/ilona-profile/images/video-thumb-3.jpg',
-      title: 'Training Highlights',
-      description: 'Compilation of training sessions',
-      duration: '3:20',
-      category: 'Training',
-    },
-    {
-      id: 4,
-      src: '/ilona-profile/videos/erg-session.mp4',
-      thumbnail: '/ilona-profile/images/video-thumb-4.jpg',
-      title: 'Ergometer Training',
-      description: '2k erg test performance',
-      duration: '8:15',
-      category: 'Fitness',
+      isYoutube: true,
     },
   ]
 
@@ -339,15 +323,43 @@ function MediaGallery() {
           {selectedMedia && (
             <Box>
               {selectedMedia.isVideo ? (
-                <video
-                  controls
-                  width="100%"
-                  style={{ display: 'block' }}
-                  poster={selectedMedia.thumbnail}
-                >
-                  <source src={selectedMedia.src} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                selectedMedia.isYoutube ? (
+                  // YouTube iframe
+                  <Box
+                    sx={{
+                      position: 'relative',
+                      paddingBottom: '56.25%', // 16:9 aspect ratio
+                      height: 0,
+                      overflow: 'hidden',
+                    }}
+                  >
+                    <iframe
+                      src={`https://www.youtube.com/embed/${selectedMedia.youtubeId}?rel=0&modestbranding=1`}
+                      title={selectedMedia.title}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                      }}
+                    />
+                  </Box>
+                ) : (
+                  // Local video file
+                  <video
+                    controls
+                    width="100%"
+                    style={{ display: 'block' }}
+                    poster={selectedMedia.thumbnail}
+                  >
+                    <source src={selectedMedia.src} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )
               ) : (
                 <img
                   src={selectedMedia.src}

@@ -19,17 +19,23 @@ public/images/
 └── video-thumb-4.jpg                ⏳ (videothumbnail)
 ```
 
-### 2. Videoiden lisääminen:
+## 🎥 YouTube-videoiden lisääminen (SUOSITELTU!)
 
-```
-public/videos/
-├── technique-analysis.mp4           ⏳ (lisää tämä)
-├── race-footage.mp4                 ⏳ (lisää tämä)
-├── training-montage.mp4             ⏳ (lisää tämä)
-└── erg-session.mp4                  ⏳ (lisää tämä)
-```
+YouTube-videot ovat paras vaihtoehto, koska:
+- ✅ Ei kasvata sivuston kokoa
+- ✅ Parempi suorituskyky
+- ✅ Automaattinen optimointi eri laitteille
+- ✅ Helppo jakaa valmentajille
 
-## 🔧 Uusien kuvien/videoiden lisääminen
+### YouTube Video ID:n löytäminen:
+
+YouTube-linkistä: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
+→ Video ID on: `dQw4w9WgXcQ` (osa "v=" jälkeen)
+
+### Lyhyestä linkistä: `https://youtu.be/dQw4w9WgXcQ`
+→ Video ID on: `dQw4w9WgXcQ` (viimeinen osa)
+
+## 🔧 Uusien medioiden lisääminen
 
 ### Lisää uusi kuva:
 
@@ -47,7 +53,27 @@ public/videos/
 }
 ```
 
-### Lisää uusi video:
+### Lisää YouTube-video (SUOSITELTU):
+
+1. Lataa video YouTubeen (voi olla unlisted/private)
+2. Kopioi Video ID YouTube-linkistä
+3. Luo thumbnail-kuva `public/images/` kansioon
+4. Lisää uusi objekti `videos` arrayhin:
+
+```javascript
+{
+  id: 5, // seuraava vapaa numero
+  youtubeId: 'dQw4w9WgXcQ', // YouTube Video ID
+  thumbnail: '/ilona-profile/images/video-thumb-5.jpg',
+  title: 'Videon otsikko',
+  description: 'Videon kuvaus',
+  duration: '3:45', // videon pituus
+  category: 'Technique', // Technique/Competition/Training/Fitness
+  isYoutube: true,
+}
+```
+
+### Lisää paikallinen video (jos YouTube ei ole vaihtoehto):
 
 1. Kopioi video `public/videos/` kansioon
 2. Luo thumbnail-kuva `public/images/` kansioon
@@ -62,10 +88,26 @@ public/videos/
   description: 'Videon kuvaus',
   duration: '3:45', // videon pituus
   category: 'Technique', // Technique/Competition/Training/Fitness
+  isYoutube: false,
 }
 ```
 
-## 📏 Kuvasuositukset
+## 🎯 YouTube vs Paikallinen video
+
+### YouTube (SUOSITELTU):
+- ✅ Ei kasvata sivuston kokoa
+- ✅ Nopea lataaminen
+- ✅ Automaattinen laadun säätö
+- ✅ Toimii kaikilla laitteilla
+- ✅ Voi olla "unlisted" (ei julkinen mutta linkki toimii)
+
+### Paikallinen video:
+- ❌ Kasvattaa sivuston kokoa huomattavasti
+- ❌ Hitaampi lataaminen
+- ❌ Voi aiheuttaa ongelmia GitHub Pages -kokorajoissa
+- ✅ Täysi kontrolli videosta
+
+## 📏 Suositukset
 
 ### Kuvat:
 
