@@ -1,49 +1,70 @@
-# Media Gallery - Kuinka lisätä kuvia ja videoita
+# Media Gallery - How to Add Images and Videos
 
-## 📸 Kuvien lisääminen
+## 📸 Adding Images
 
-### 1. Kopioi kuvat oikeaan kansioon:
+### 1. Copy images to the correct folder:
 
 ```
 public/images/
-├── ilonan-profiilikuva.jpg          ✅ (jo lisätty)
-├── rowing-action-1.jpg              ⏳ (lisää tämä)
-├── competition-1.jpg                ⏳ (lisää tämä)
-├── team-photo.jpg                   ⏳ (lisää tämä)
-├── rowing-technique.jpg             ⏳ (lisää tämä)
-├── medal-ceremony.jpg               ⏳ (lisää tämä)
-├── sunrise-training.jpg             ⏳ (lisää tämä)
-├── video-thumb-1.jpg                ⏳ (videothumbnail)
-├── video-thumb-2.jpg                ⏳ (videothumbnail)
-├── video-thumb-3.jpg                ⏳ (videothumbnail)
-└── video-thumb-4.jpg                ⏳ (videothumbnail)
+├── ilonan-profiilikuva.jpg          ✅ (already added)
+├── rowing-action-1.jpg              ⏳ (add this)
+├── competition-1.jpg                ⏳ (add this)
+├── team-photo.jpg                   ⏳ (add this)
+├── rowing-technique.jpg             ⏳ (add this)
+├── medal-ceremony.jpg               ⏳ (add this)
+├── sunrise-training.jpg             ⏳ (add this)
+└── ... (more images as needed)
 ```
 
-## 🎥 YouTube-videoiden lisääminen (SUOSITELTU!)
+## 🎥 Adding YouTube Videos (RECOMMENDED!)
 
-YouTube-videot ovat paras vaihtoehto, koska:
+YouTube videos are the best option because:
 
-- ✅ Ei kasvata sivuston kokoa
-- ✅ Parempi suorituskyky
-- ✅ Automaattinen optimointi eri laitteille
-- ✅ Helppo jakaa valmentajille
+- ✅ Doesn't increase website size
+- ✅ Better performance
+- ✅ Automatic optimization for different devices
+- ✅ Easy to share with coaches
 
-### YouTube Video ID:n löytäminen:
+### Finding YouTube Video ID:
 
-YouTube-linkistä: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
-→ Video ID on: `dQw4w9WgXcQ` (osa "v=" jälkeen)
+From YouTube link: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
+→ Video ID is: `dQw4w9WgXcQ` (part after "v=")
 
-### Lyhyestä linkistä: `https://youtu.be/dQw4w9WgXcQ`
+From short link: `https://youtu.be/dQw4w9WgXcQ`
+→ Video ID is: `dQw4w9WgXcQ` (last part)
 
-→ Video ID on: `dQw4w9WgXcQ` (viimeinen osa)
+## 📝 Adding Media to Blog Posts
 
-## 🔧 Uusien medioiden lisääminen
+To add media to a blog post, edit the `media` array in `src/components/Blog.tsx`:
 
-### Lisää uusi kuva:
+### Adding YouTube Video:
 
-1. Kopioi kuva `public/images/` kansioon
-2. Avaa `src/components/MediaGallery.jsx`
-3. Lisää uusi objekti `photos` arrayhin:
+```typescript
+{
+  type: 'video',
+  src: '', // Not needed for YouTube
+  youtubeId: 'dQw4w9WgXcQ', // Your YouTube video ID
+  caption: 'Race highlights from the European Championships',
+}
+```
+
+### Adding Image:
+
+```typescript
+{
+  type: 'image',
+  src: '/images/rowing-action-1.jpg',
+  caption: 'Training session in Turkey before the championships',
+}
+```
+
+## 🔧 Adding New Media to Gallery
+
+### Add new image to MediaGallery:
+
+1. Copy image to `public/images/` folder
+2. Open `src/components/MediaGallery.tsx`
+3. Add new object to `photos` array:
 
 ```javascript
 {

@@ -1,6 +1,6 @@
 # TypeScript Migration Summary
 
-This project has been successfully migrated from JavaScript to TypeScript. Here's what was accomplished:
+This project has been successfully migrated from JavaScript to TypeScript and includes a new Blog feature. Here's what was accomplished:
 
 ## Files Converted
 
@@ -19,6 +19,24 @@ This project has been successfully migrated from JavaScript to TypeScript. Here'
 - `src/components/Academic.jsx` → `src/components/Academic.tsx`
 - `src/components/MediaGallery.jsx` → `src/components/MediaGallery.tsx`
 - `src/components/Contact.jsx` → `src/components/Contact.tsx`
+- `src/components/Blog.tsx` ⭐ **NEW FEATURE**
+
+## New Blog Feature
+
+### Blog Component Features
+
+- **Blog Post Display**: Cards showing blog post previews with images, excerpts, and metadata
+- **Full Post Dialog**: Modal dialog for reading complete blog posts with rich HTML content
+- **Categorization**: Posts are categorized and tagged for easy navigation
+- **Responsive Design**: Optimized for mobile and desktop viewing
+- **Finnish Language Support**: Content and UI in Finnish for local audience
+
+### First Blog Post: "Euroopan mestaruuskilpailut Turkissa"
+
+- Detailed account of Ilona's participation in European Coastal Rowing Championships in Turkey
+- Includes preparation, competition experience, and lessons learned
+- Rich HTML content with proper typography and styling
+- Metadata: Date, location, category, and tags
 
 ## TypeScript Configurations Added
 

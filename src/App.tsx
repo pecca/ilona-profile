@@ -7,6 +7,7 @@ import About from './components/About'
 import Athletic from './components/Athletic'
 import Academic from './components/Academic'
 import MediaGallery from './components/MediaGallery'
+import Blog from './components/Blog'
 import Contact from './components/Contact'
 
 const theme = createTheme({
@@ -37,6 +38,7 @@ const App: React.FC = () => {
           <Athletic />
           <Academic />
           <MediaGallery />
+          <Blog />
           <Contact />
         </Box>
       </Container>

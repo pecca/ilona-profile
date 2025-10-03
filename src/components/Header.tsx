@@ -77,6 +77,9 @@ const Header: React.FC = () => {
             <Button color="inherit" onClick={() => scrollToSection('media')}>
               Media
             </Button>
+            <Button color="inherit" onClick={() => scrollToSection('blog')}>
+              Blog
+            </Button>
             <Button color="inherit" onClick={() => scrollToSection('contact')}>
               Contact
             </Button>
