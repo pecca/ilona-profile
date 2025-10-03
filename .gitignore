@@ -76,3 +76,11 @@ coverage/
 # Temporary folders
 tmp/
 temp/
+
+# SEO and search engine files (we want to block these)
+sitemap.xml
+sitemap*.xml
+google*.html
+bing*.xml
+yandex*.txt
+baidu*.txt

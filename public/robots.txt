@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# This website is private and intended only for rowing coaches
+# and university recruitment purposes. Please do not index.
