@@ -70,3 +70,118 @@ img[data-loading] {
     display: none !important;
   }
 }
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  /* Better touch targets */
+  .MuiButton-root {
+    min-height: 44px;
+    padding: 12px 16px;
+  }
+
+  .MuiIconButton-root {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Improved text readability */
+  .MuiTypography-body1 {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .MuiTypography-body2 {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Better spacing */
+  .MuiContainer-root {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Improved form fields */
+  .MuiTextField-root {
+    margin-bottom: 16px;
+  }
+
+  .MuiInputBase-input {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  /* Better card spacing */
+  .MuiCard-root {
+    margin-bottom: 16px;
+  }
+
+  /* Optimize images */
+  .MuiCardMedia-root {
+    height: 200px; /* Smaller on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small screens */
+  .MuiTypography-h4 {
+    font-size: 1.5rem;
+  }
+
+  .MuiTypography-h5 {
+    font-size: 1.25rem;
+  }
+
+  .MuiTypography-h6 {
+    font-size: 1.1rem;
+  }
+
+  /* Smaller spacing */
+  .MuiBox-root {
+    padding: 8px;
+  }
+
+  /* Better grid spacing */
+  .MuiGrid-item {
+    padding: 8px;
+  }
+}
+
+/* Landscape mobile optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+  .MuiAppBar-root {
+    min-height: 56px;
+  }
+
+  .MuiAvatar-root {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .MuiTypography-h4 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .MuiButton-root {
+    border: 2px solid currentColor;
+  }
+
+  .MuiCard-root {
+    border: 1px solid #333;
+  }
+}

@@ -29,6 +29,88 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    // Better mobile typography
+    h1: {
+      fontSize: '2rem',
+      '@media (min-width:600px)': {
+        fontSize: '2.5rem',
+      },
+      '@media (min-width:960px)': {
+        fontSize: '3rem',
+      },
+    },
+    h2: {
+      fontSize: '1.75rem',
+      '@media (min-width:600px)': {
+        fontSize: '2rem',
+      },
+      '@media (min-width:960px)': {
+        fontSize: '2.5rem',
+      },
+    },
+    h3: {
+      fontSize: '1.5rem',
+      '@media (min-width:600px)': {
+        fontSize: '1.75rem',
+      },
+      '@media (min-width:960px)': {
+        fontSize: '2rem',
+      },
+    },
+    body1: {
+      fontSize: '1rem',
+      lineHeight: 1.6,
+      '@media (max-width:600px)': {
+        fontSize: '0.9rem',
+        lineHeight: 1.5,
+      },
+    },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+    },
+  },
+  components: {
+    // Better mobile touch targets
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          minHeight: 44,
+          '@media (max-width:600px)': {
+            minHeight: 48,
+            fontSize: '1rem',
+          },
+        },
+      },
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          '@media (max-width:600px)': {
+            minHeight: 48,
+            minWidth: 48,
+          },
+        },
+      },
+    },
+    // Better mobile spacing
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          paddingLeft: 16,
+          paddingRight: 16,
+          '@media (max-width:600px)': {
+            paddingLeft: 12,
+            paddingRight: 12,
+          },
+        },
+      },
+    },
   },
 })
 
@@ -49,7 +131,12 @@ const App: React.FC = () => {
       <CssBaseline />
       <Header />
       <Container maxWidth="lg">
-        <Box sx={{ py: 4 }}>
+        <Box
+          sx={{
+            py: { xs: 2, sm: 3, md: 4 },
+            px: { xs: 1, sm: 2 },
+          }}
+        >
           <About />
           <Athletic />
           <Academic />

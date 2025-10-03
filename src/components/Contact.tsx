@@ -36,6 +36,14 @@ import {
 const Section = styled(Box)(({ theme }) => ({
   marginBottom: theme.spacing(6),
   padding: theme.spacing(2),
+  [theme.breakpoints.down('md')]: {
+    marginBottom: theme.spacing(4),
+    padding: theme.spacing(1.5),
+  },
+  [theme.breakpoints.down('sm')]: {
+    marginBottom: theme.spacing(3),
+    padding: theme.spacing(1),
+  },
 }))
 
 const StyledCard = styled(Card)(({ theme }) => ({
@@ -43,6 +51,11 @@ const StyledCard = styled(Card)(({ theme }) => ({
   transition: 'transform 0.3s ease-in-out',
   '&:hover': {
     transform: 'translateY(-2px)',
+  },
+  [theme.breakpoints.down('sm')]: {
+    '&:hover': {
+      transform: 'none', // Disable hover effects on mobile
+    },
   },
 }))
 
@@ -54,12 +67,24 @@ const IconWrapper = styled(Box)(({ theme }) => ({
     marginRight: theme.spacing(1),
     color: theme.palette.primary.main,
   },
+  [theme.breakpoints.down('sm')]: {
+    marginBottom: theme.spacing(1.5),
+    '& .MuiSvgIcon-root': {
+      marginRight: theme.spacing(0.75),
+    },
+  },
 }))
 
 const ContactCard = styled(Card)(({ theme }) => ({
   padding: theme.spacing(3),
   textAlign: 'center',
   background: 'linear-gradient(45deg, #e3f2fd 30%, #ffffff 90%)',
+  [theme.breakpoints.down('md')]: {
+    padding: theme.spacing(2.5),
+  },
+  [theme.breakpoints.down('sm')]: {
+    padding: theme.spacing(2),
+  },
 }))
 
 interface FormData {

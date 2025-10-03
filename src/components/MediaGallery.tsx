@@ -27,6 +27,14 @@ import { trackVideoPlay, trackImageView } from '../utils/analytics'
 const Section = styled(Box)(({ theme }) => ({
   marginBottom: theme.spacing(6),
   padding: theme.spacing(2),
+  [theme.breakpoints.down('md')]: {
+    marginBottom: theme.spacing(4),
+    padding: theme.spacing(1.5),
+  },
+  [theme.breakpoints.down('sm')]: {
+    marginBottom: theme.spacing(3),
+    padding: theme.spacing(1),
+  },
 }))
 
 const StyledCard = styled(Card)(({ theme }) => ({
@@ -36,6 +44,12 @@ const StyledCard = styled(Card)(({ theme }) => ({
   '&:hover': {
     transform: 'translateY(-4px)',
     boxShadow: theme.shadows[8],
+  },
+  [theme.breakpoints.down('sm')]: {
+    '&:hover': {
+      transform: 'translateY(-2px)', // Smaller movement on mobile
+      boxShadow: theme.shadows[4],
+    },
   },
 }))
 
@@ -47,6 +61,12 @@ const IconWrapper = styled(Box)(({ theme }) => ({
     marginRight: theme.spacing(1),
     color: theme.palette.primary.main,
   },
+  [theme.breakpoints.down('sm')]: {
+    marginBottom: theme.spacing(1.5),
+    '& .MuiSvgIcon-root': {
+      marginRight: theme.spacing(0.75),
+    },
+  },
 }))
 
 const MediaCard = styled(Card)(({ theme }) => ({
@@ -56,6 +76,12 @@ const MediaCard = styled(Card)(({ theme }) => ({
   '&:hover': {
     transform: 'scale(1.02)',
     boxShadow: theme.shadows[6],
+  },
+  [theme.breakpoints.down('sm')]: {
+    '&:hover': {
+      transform: 'scale(1.01)', // Smaller scale on mobile
+      boxShadow: theme.shadows[4],
+    },
   },
 }))
 
@@ -74,6 +100,9 @@ const VideoOverlay = styled(Box)(({ theme }) => ({
   '&:hover': {
     opacity: 1,
   },
+  [theme.breakpoints.down('sm')]: {
+    opacity: 0.7, // Always visible on mobile for better UX
+  },
 }))
 
 const MediaTitle = styled(Box)(({ theme }) => ({
@@ -84,6 +113,12 @@ const MediaTitle = styled(Box)(({ theme }) => ({
   background: 'linear-gradient(transparent, rgba(0, 0, 0, 0.7))',
   color: 'white',
   padding: theme.spacing(2),
+  [theme.breakpoints.down('sm')]: {
+    padding: theme.spacing(1.5),
+    '& .MuiTypography-root': {
+      fontSize: '0.875rem',
+    },
+  },
 }))
 
 interface MediaItem {
