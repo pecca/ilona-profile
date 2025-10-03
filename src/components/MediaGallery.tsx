@@ -85,18 +85,48 @@ const MediaTitle = styled(Box)(({ theme }) => ({
   padding: theme.spacing(2),
 }))
 
-function MediaGallery() {
-  const [selectedTab, setSelectedTab] = useState(0)
-  const [openDialog, setOpenDialog] = useState(false)
-  const [selectedMedia, setSelectedMedia] = useState(null)
+interface MediaItem {
+  id: number
+  src: string
+  title: string
+  description: string
+  category: string
+}
+
+interface VideoItem {
+  id: number
+  youtubeId: string
+  thumbnail: string
+  title: string
+  description: string
+  duration: string
+  category: string
+  isYoutube: boolean
+}
+
+interface SelectedMedia extends MediaItem {
+  isVideo?: boolean
+  youtubeId?: string
+  thumbnail?: string
+  duration?: string
+  isYoutube?: boolean
+}
+
+const MediaGallery: React.FC = () => {
+  const [selectedTab, setSelectedTab] = useState<number>(0)
+  const [openDialog, setOpenDialog] = useState<boolean>(false)
+  const [selectedMedia, setSelectedMedia] = useState<SelectedMedia | null>(null)
 
   // Helper function to get YouTube thumbnail
-  const getYouTubeThumbnail = (videoId, quality = 'hqdefault') => {
+  const getYouTubeThumbnail = (
+    videoId: string,
+    quality: string = 'hqdefault'
+  ): string => {
     return `https://img.youtube.com/vi/${videoId}/${quality}.jpg`
   }
 
   // Placeholder data - näitä korvataan oikeilla kuvilla ja videoilla
-  const photos = [
+  const photos: MediaItem[] = [
     {
       id: 1,
       src: '/ilona-profile/images/single-scull_1.jpg',
@@ -150,12 +180,15 @@ function MediaGallery() {
     },
   ]
 
-  const handleMediaClick = (media, isVideo = false) => {
-    setSelectedMedia({ ...media, isVideo })
+  const handleMediaClick = (
+    media: MediaItem | VideoItem,
+    isVideo: boolean = false
+  ): void => {
+    setSelectedMedia({ ...media, isVideo } as SelectedMedia)
     setOpenDialog(true)
   }
 
-  const handleCloseDialog = () => {
+  const handleCloseDialog = (): void => {
     setOpenDialog(false)
     setSelectedMedia(null)
   }
@@ -178,9 +211,10 @@ function MediaGallery() {
                 fontSize: '0.875rem',
                 color: 'text.secondary',
               }}
-              onError={(e) => {
-                e.target.style.display = 'flex'
-                e.target.innerHTML = `📷 ${photo.title}`
+              onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+                const target = e.target as HTMLImageElement
+                target.style.display = 'flex'
+                target.innerHTML = `📷 ${photo.title}`
               }}
             />
             <MediaTitle>
@@ -219,9 +253,10 @@ function MediaGallery() {
                   fontSize: '0.875rem',
                   color: 'text.secondary',
                 }}
-                onError={(e) => {
-                  e.target.style.display = 'flex'
-                  e.target.innerHTML = `🎥 ${video.title}`
+                onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+                  const target = e.target as HTMLImageElement
+                  target.style.display = 'flex'
+                  target.innerHTML = `🎥 ${video.title}`
                 }}
               />
               <VideoOverlay>
@@ -375,12 +410,15 @@ function MediaGallery() {
                     display: 'block',
                     backgroundColor: '#f5f5f5',
                   }}
-                  onError={(e) => {
-                    e.target.style.display = 'flex'
-                    e.target.style.alignItems = 'center'
-                    e.target.style.justifyContent = 'center'
-                    e.target.style.height = '400px'
-                    e.target.innerHTML = `Media: ${selectedMedia.title}`
+                  onError={(
+                    e: React.SyntheticEvent<HTMLImageElement, Event>
+                  ) => {
+                    const target = e.target as HTMLImageElement
+                    target.style.display = 'flex'
+                    target.style.alignItems = 'center'
+                    target.style.justifyContent = 'center'
+                    target.style.height = '400px'
+                    target.innerHTML = `Media: ${selectedMedia.title}`
                   }}
                 />
               )}

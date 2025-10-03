@@ -58,23 +58,39 @@ const ContactCard = styled(Card)(({ theme }) => ({
   background: 'linear-gradient(45deg, #e3f2fd 30%, #ffffff 90%)',
 }))
 
-function Contact() {
-  const [formData, setFormData] = useState({
+interface FormData {
+  name: string
+  email: string
+  university: string
+  message: string
+}
+
+interface ContactInfo {
+  icon: React.ReactElement
+  label: string
+  value: string
+  type: string
+}
+
+const Contact: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     university: '',
     message: '',
   })
-  const [showSuccess, setShowSuccess] = useState(false)
+  const [showSuccess, setShowSuccess] = useState<boolean>(false)
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ): void => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
     // Tässä olisi oikea lomakkeen lähetyslogiikka
     console.log('Form submitted:', formData)
@@ -82,7 +98,7 @@ function Contact() {
     setFormData({ name: '', email: '', university: '', message: '' })
   }
 
-  const contactInfo = [
+  const contactInfo: ContactInfo[] = [
     {
       icon: <Email />,
       label: 'Email',

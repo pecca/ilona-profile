@@ -1,13 +1,5 @@
 import React from 'react'
-import {
-  Box,
-  Typography,
-  Card,
-  CardContent,
-  Grid,
-  Chip,
-  Avatar,
-} from '@mui/material'
+import { Box, Typography, Card, CardContent, Grid, Chip } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import { Rowing, School, Language } from '@mui/icons-material'
 
@@ -34,9 +26,13 @@ const IconWrapper = styled(Box)(({ theme }) => ({
   },
 }))
 
-function About() {
-  const languages = ['Finnish (Native)', 'English (Fluent)', 'Swedish (Basic)']
-  const interests = [
+const About: React.FC = () => {
+  const languages: string[] = [
+    'Finnish (Native)',
+    'English (Fluent)',
+    'Swedish (Basic)',
+  ]
+  const interests: string[] = [
     'Rowing',
     'Fitness Training',
     'Nutrition',

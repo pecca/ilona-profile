@@ -28,8 +28,8 @@ const NavigationSection = styled(Box)(({ theme }) => ({
   marginLeft: 'auto',
 }))
 
-function Header() {
-  const scrollToSection = (sectionId) => {
+const Header: React.FC = () => {
+  const scrollToSection = (sectionId: string): void => {
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })

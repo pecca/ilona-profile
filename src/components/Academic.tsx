@@ -58,8 +58,19 @@ const GradeCard = styled(Card)(({ theme }) => ({
   background: 'linear-gradient(45deg, #e3f2fd 30%, #ffffff 90%)',
 }))
 
-function Academic() {
-  const currentGrades = [
+interface Grade {
+  subject: string
+  grade: string
+  level: string
+}
+
+interface AcademicInterest {
+  area: string
+  icon: React.ReactElement
+}
+
+const Academic: React.FC = () => {
+  const currentGrades: Grade[] = [
     { subject: 'Mathematics', grade: '9.2', level: 'Advanced' },
     { subject: 'Physics', grade: '8.8', level: 'Advanced' },
     { subject: 'Chemistry', grade: '9.0', level: 'Advanced' },
@@ -69,7 +80,7 @@ function Academic() {
     { subject: 'Swedish', grade: '8.0', level: 'Standard' },
   ]
 
-  const academicAchievements = [
+  const academicAchievements: string[] = [
     'Honor Roll Student (2022-2024)',
     'Science Fair Regional Winner (2023)',
     'Mathematics Olympiad Participant (2023)',
@@ -77,14 +88,14 @@ function Academic() {
     'Environmental Club President (2024)',
   ]
 
-  const academicInterests = [
+  const academicInterests: AcademicInterest[] = [
     { area: 'Environmental Science', icon: <Science /> },
     { area: 'Marine Biology', icon: <Science /> },
     { area: 'Sports Psychology', icon: <Psychology /> },
     { area: 'International Business', icon: <School /> },
   ]
 
-  const calculateGPA = (grades) => {
+  const calculateGPA = (grades: Grade[]): string => {
     const total = grades.reduce(
       (sum, grade) => sum + parseFloat(grade.grade),
       0

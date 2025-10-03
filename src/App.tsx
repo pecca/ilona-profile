@@ -1,14 +1,7 @@
 import React from 'react'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
-import {
-  Container,
-  AppBar,
-  Toolbar,
-  Typography,
-  Box,
-  Alert,
-} from '@mui/material'
+import { Container, Box, Alert, Typography } from '@mui/material'
 import Header from './components/Header'
 import About from './components/About'
 import Athletic from './components/Athletic'
@@ -33,7 +26,7 @@ const theme = createTheme({
   },
 })
 
-function App() {
+const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />

@@ -52,15 +52,33 @@ const StatCard = styled(Card)(({ theme }) => ({
   background: 'linear-gradient(45deg, #f3f4f6 30%, #ffffff 90%)',
 }))
 
-function Athletic() {
-  const personalBests = [
+interface PersonalBest {
+  distance: string
+  time: string
+  boat: string
+}
+
+interface Achievement {
+  year: string
+  event: string
+  result: string
+}
+
+interface PhysicalStat {
+  label: string
+  value: string
+  progress: number
+}
+
+const Athletic: React.FC = () => {
+  const personalBests: PersonalBest[] = [
     { distance: '2000m', time: '7:45.2', boat: 'Single Scull' },
     { distance: '6000m', time: '24:12.8', boat: 'Erg' },
     { distance: '1000m', time: '3:52.1', boat: 'Single Scull' },
     { distance: '5000m', time: '19:45.3', boat: 'Erg' },
   ]
 
-  const achievements = [
+  const achievements: Achievement[] = [
     {
       year: '2024',
       event: 'National Junior Championships',
@@ -84,7 +102,7 @@ function Athletic() {
     },
   ]
 
-  const physicalStats = [
+  const physicalStats: PhysicalStat[] = [
     { label: 'Height', value: '175 cm', progress: 85 },
     { label: 'Weight', value: '65 kg', progress: 75 },
     { label: 'Erg 2k PB', value: '7:45.2', progress: 90 },
