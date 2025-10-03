@@ -6,7 +6,7 @@ const MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX'
 export const initializeAnalytics = () => {
   // Only initialize in production or if measurement ID is properly set
   if (
-    process.env.NODE_ENV === 'production' &&
+    import.meta.env.MODE === 'production' &&
     MEASUREMENT_ID !== 'G-XXXXXXXXXX'
   ) {
     ReactGA.initialize(MEASUREMENT_ID)
@@ -19,7 +19,7 @@ export const initializeAnalytics = () => {
 }
 
 export const trackPageView = (path: string, title?: string) => {
-  if (process.env.NODE_ENV === 'production') {
+  if (import.meta.env.MODE === 'production') {
     ReactGA.send({
       hitType: 'pageview',
       page: path,
@@ -32,7 +32,7 @@ export const trackEvent = (
   eventName: string,
   parameters?: Record<string, any>
 ) => {
-  if (process.env.NODE_ENV === 'production') {
+  if (import.meta.env.MODE === 'production') {
     ReactGA.event(eventName, parameters)
   }
 }
