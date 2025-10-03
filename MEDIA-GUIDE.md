@@ -22,6 +22,7 @@ public/images/
 ## 🎥 YouTube-videoiden lisääminen (SUOSITELTU!)
 
 YouTube-videot ovat paras vaihtoehto, koska:
+
 - ✅ Ei kasvata sivuston kokoa
 - ✅ Parempi suorituskyky
 - ✅ Automaattinen optimointi eri laitteille
@@ -33,6 +34,7 @@ YouTube-linkistä: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
 → Video ID on: `dQw4w9WgXcQ` (osa "v=" jälkeen)
 
 ### Lyhyestä linkistä: `https://youtu.be/dQw4w9WgXcQ`
+
 → Video ID on: `dQw4w9WgXcQ` (viimeinen osa)
 
 ## 🔧 Uusien medioiden lisääminen
@@ -57,14 +59,14 @@ YouTube-linkistä: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
 
 1. Lataa video YouTubeen (voi olla unlisted/private)
 2. Kopioi Video ID YouTube-linkistä
-3. Luo thumbnail-kuva `public/images/` kansioon
+3. **EI TARVITSE** thumbnail-kuvaa - YouTube tarjoaa automaattisesti!
 4. Lisää uusi objekti `videos` arrayhin:
 
 ```javascript
 {
   id: 5, // seuraava vapaa numero
   youtubeId: 'dQw4w9WgXcQ', // YouTube Video ID
-  thumbnail: '/ilona-profile/images/video-thumb-5.jpg',
+  thumbnail: getYouTubeThumbnail('dQw4w9WgXcQ'), // Automaattinen YouTube thumbnail
   title: 'Videon otsikko',
   description: 'Videon kuvaus',
   duration: '3:45', // videon pituus
@@ -72,6 +74,20 @@ YouTube-linkistä: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
   isYoutube: true,
 }
 ```
+
+## 🎯 YouTube Thumbnail Edut:
+
+- ✅ **Automaattinen** - ei tarvitse luoda omia kuvia
+- ✅ **Aina ajan tasalla** - päivittyy jos YouTube-thumbnailv aihdetaan
+- ✅ **Optimoitu** - YouTube optimoi kuvakoot automaattisesti
+- ✅ **Nopea** - ei lataa turhia kuvia sivustolle
+
+## 📏 YouTube Thumbnail Koot:
+
+- `maxresdefault.jpg` - 1280x720px (paras laatu)
+- `hqdefault.jpg` - 480x360px (hyvä laatu, suositeltu)
+- `mqdefault.jpg` - 320x180px (keskitaso)
+- `default.jpg` - 120x90px (pieni)
 
 ### Lisää paikallinen video (jos YouTube ei ole vaihtoehto):
 
@@ -95,6 +111,7 @@ YouTube-linkistä: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
 ## 🎯 YouTube vs Paikallinen video
 
 ### YouTube (SUOSITELTU):
+
 - ✅ Ei kasvata sivuston kokoa
 - ✅ Nopea lataaminen
 - ✅ Automaattinen laadun säätö
@@ -102,6 +119,7 @@ YouTube-linkistä: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
 - ✅ Voi olla "unlisted" (ei julkinen mutta linkki toimii)
 
 ### Paikallinen video:
+
 - ❌ Kasvattaa sivuston kokoa huomattavasti
 - ❌ Hitaampi lataaminen
 - ❌ Voi aiheuttaa ongelmia GitHub Pages -kokorajoissa

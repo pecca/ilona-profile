@@ -90,6 +90,11 @@ function MediaGallery() {
   const [openDialog, setOpenDialog] = useState(false)
   const [selectedMedia, setSelectedMedia] = useState(null)
 
+  // Helper function to get YouTube thumbnail
+  const getYouTubeThumbnail = (videoId, quality = 'hqdefault') => {
+    return `https://img.youtube.com/vi/${videoId}/${quality}.jpg`
+  }
+
   // Placeholder data - näitä korvataan oikeilla kuvilla ja videoilla
   const photos = [
     {
@@ -125,8 +130,8 @@ function MediaGallery() {
   const videos = [
     {
       id: 1,
-      youtubeId: 'https://youtu.be/24BjcbchnUA', // Korvaa tämä oikealla YouTube video ID:llä
-      thumbnail: '/ilona-profile/images/video-thumb-1.jpg',
+      youtubeId: '24BjcbchnUA',
+      thumbnail: getYouTubeThumbnail('24BjcbchnUA'), // Automaattinen YouTube thumbnail
       title: 'Stroke Technique Analysis',
       description: 'Side view analysis of rowing technique',
       duration: '2:45',
@@ -135,8 +140,8 @@ function MediaGallery() {
     },
     {
       id: 2,
-      youtubeId: 'https://youtu.be/OA0CWhY4NV8', // Korvaa tämä oikealla YouTube video ID:llä
-      thumbnail: '/ilona-profile/images/video-thumb-2.jpg',
+      youtubeId: 'OA0CWhY4NV8',
+      thumbnail: getYouTubeThumbnail('OA0CWhY4NV8'), // Automaattinen YouTube thumbnail
       title: 'Regional Championship Race',
       description: 'Full race footage from winning performance',
       duration: '7:30',
