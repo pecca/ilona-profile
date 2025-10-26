@@ -29,7 +29,7 @@ const IconWrapper = styled(Box)(({ theme }) => ({
 const About: React.FC = () => {
   const languages: string[] = [
     'Finnish (Native)',
-    'English (Fluent)',
+    'English (Good)',
     'Swedish (Basic)',
   ]
   const interests: string[] = [
@@ -63,25 +63,36 @@ const About: React.FC = () => {
                 </Typography>
               </IconWrapper>
               <Typography variant="body1" paragraph>
-                I have been passionate about rowing for over 6 years, starting
-                my journey at the age of 14. What began as a curiosity about
-                this elegant sport has evolved into a deep commitment to
-                excellence both on the water and in academics.
+                Sports have been my passion since childhood. I’ve always enjoyed
+                being active, training hard, and competing. In addition to
+                rowing, I have practiced artistic gymnastics, orienteering, and
+                cross-country skiing. My interest in rowing has grown gradually
+                over the years, and in the summer of 2025, I made the decision
+                to focus on rowing as my main sport.
               </Typography>
               <Typography variant="body1" paragraph>
-                Throughout my rowing career, I have consistently demonstrated
-                dedication, teamwork, and the ability to perform under pressure.
-                My goal is to continue developing my athletic abilities while
-                pursuing higher education in the United States, where I can
-                contribute to a collegiate rowing program and grow both as an
-                athlete and a student.
+                I started rowing at the age of 13. I enjoy rowing in all boat
+                classes, both in traditional flatwater rowing and coastal
+                rowing. I represent the club Takon Soutajat. Last summer, our
+                crew won the Finnish Championship in the women's eight. I also
+                performed well in the four, pair, and single sculls.
               </Typography>
               <Typography variant="body1" paragraph>
-                I am seeking a rowing scholarship that will allow me to combine
-                my athletic passion with academic excellence. I believe that the
-                discipline and work ethic I have developed through rowing will
-                serve me well in both collegiate athletics and my chosen field
-                of study.
+                In coastal rowing, I was selected to represent Finland at the
+                European Rowing Coastal Championships in Turkey in the U19
+                category, where I reached the knock-out stage. It was an
+                incredibly fun and memorable experience—I rowed on ocean waves
+                for the first time. The Coastal Rowing World Championships will
+                also be held in Turkey, and I will be competing there as well.
+              </Typography>
+              <Typography variant="body1" paragraph>
+                Currently, I attend Sammon keskuslukio, a sports-focused high
+                school where I’ve learned to balance training and academics. I
+                will graduate in December 2026. In the future, I want to succeed
+                in rowing and pursue a meaningful academic career. My goal is to
+                earn a rowing scholarship in the United States, which I believe
+                is the best way to combine both ambitions. I am ready to begin
+                my university studies in the fall of 2027.
               </Typography>
             </CardContent>
           </StyledCard>
