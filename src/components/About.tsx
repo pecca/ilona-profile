@@ -119,30 +119,6 @@ const About: React.FC = () => {
                 </CardContent>
               </StyledCard>
             </Grid>
-
-            <Grid item xs={12}>
-              <StyledCard>
-                <CardContent>
-                  <IconWrapper>
-                    <School />
-                    <Typography variant="h6" component="h3">
-                      Interests & Values
-                    </Typography>
-                  </IconWrapper>
-                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                    {interests.map((interest, index) => (
-                      <Chip
-                        key={index}
-                        label={interest}
-                        color="primary"
-                        variant="outlined"
-                        size="small"
-                      />
-                    ))}
-                  </Box>
-                </CardContent>
-              </StyledCard>
-            </Grid>
           </Grid>
         </Grid>
       </Grid>

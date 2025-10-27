@@ -103,6 +103,8 @@ const Academic: React.FC = () => {
     return (total / grades.length).toFixed(2)
   }
 
+  return null
+
   return (
     <Section id="academic">
       <Typography

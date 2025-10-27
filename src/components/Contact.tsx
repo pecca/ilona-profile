@@ -246,39 +246,12 @@ const Contact: React.FC = () => {
                   </ListItem>
                 ))}
               </List>
-
-              <Divider sx={{ my: 3 }} />
-
-              <Typography variant="h6" gutterBottom>
-                Available Documents
-              </Typography>
-              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 3 }}>
-                {documents.map((doc, index) => (
-                  <Chip
-                    key={index}
-                    label={doc}
-                    variant="outlined"
-                    size="small"
-                    icon={<Download />}
-                    clickable
-                  />
-                ))}
-              </Box>
-
-              <Button
-                variant="contained"
-                startIcon={<Download />}
-                fullWidth
-                sx={{ mt: 2 }}
-              >
-                Download Complete Recruitment Package
-              </Button>
             </CardContent>
           </StyledCard>
         </Grid>
 
         {/* Contact Form */}
-        <Grid item xs={12} md={6}>
+        {/*<Grid item xs={12} md={6}>
           <StyledCard>
             <CardContent>
               <IconWrapper>
@@ -342,7 +315,7 @@ const Contact: React.FC = () => {
               </Box>
             </CardContent>
           </StyledCard>
-        </Grid>
+        </Grid>)*/}
 
         {/* References */}
         <Grid item xs={12}>

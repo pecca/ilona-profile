@@ -104,9 +104,8 @@ const Athletic: React.FC = () => {
 
   const physicalStats: PhysicalStat[] = [
     { label: 'Height', value: '175 cm', progress: 85 },
-    { label: 'Weight', value: '65 kg', progress: 75 },
+    { label: 'Weight', value: '70 kg', progress: 75 },
     { label: 'Erg 2k PB', value: '7:45.2', progress: 90 },
-    { label: 'Training Hours/Week', value: '18-22h', progress: 95 },
   ]
 
   return (
@@ -123,7 +122,7 @@ const Athletic: React.FC = () => {
 
       <Grid container spacing={4}>
         {/* Personal Bests Table */}
-        <Grid item xs={12} md={8}>
+        {/*<Grid item xs={12} md={8}>
           <StyledCard>
             <CardContent>
               <IconWrapper>
@@ -168,7 +167,7 @@ const Athletic: React.FC = () => {
               </TableContainer>
             </CardContent>
           </StyledCard>
-        </Grid>
+        </Grid>*/}
 
         {/* Physical Stats */}
         <Grid item xs={12} md={4}>
@@ -204,7 +203,7 @@ const Athletic: React.FC = () => {
         </Grid>
 
         {/* Achievements */}
-        <Grid item xs={12}>
+        {/*<Grid item xs={12}>
           <StyledCard>
             <CardContent>
               <IconWrapper>
@@ -252,7 +251,7 @@ const Athletic: React.FC = () => {
               </Grid>
             </CardContent>
           </StyledCard>
-        </Grid>
+        </Grid>*/}
       </Grid>
     </Section>
   )
