@@ -140,13 +140,13 @@ const Contact: React.FC = () => {
     {
       icon: <Email />,
       label: 'Email',
-      value: 'ilona.makela@email.com',
+      value: 'ilona.k.makela@gmail.com',
       type: 'email',
     },
     {
       icon: <Phone />,
       label: 'Phone',
-      value: '+358 50 123 4567',
+      value: '+358 45 196 2491',
       type: 'phone',
     },
     {
