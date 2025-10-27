@@ -192,20 +192,6 @@ const MediaGallery: React.FC = () => {
       category: 'Competition',
     },
     {
-      id: 5,
-      src: '/ilona-profile/images/ilona-em-coastal_5.jpg',
-      title: '',
-      description: 'EM Coastal Championships 2025',
-      category: 'Competition',
-    },
-    {
-      id: 6,
-      src: '/ilona-profile/images/ilona-em-coastal_6.jpg',
-      title: '',
-      description: 'EM Coastal Championships 2025',
-      category: 'Competition',
-    },
-    {
       id: 7,
       src: '/ilona-profile/images/single-scull_1.jpg',
       title: '',
@@ -233,6 +219,27 @@ const MediaGallery: React.FC = () => {
       description: 'National Championships 2025',
       category: 'Competition',
     },
+    {
+      id: 11,
+      src: '/ilona-profile/images/ilona-suunnistus.jpg',
+      title: '',
+      description: 'Orienteering',
+      category: 'Competition',
+    },
+    {
+      id: 12,
+      src: '/ilona-profile/images/ilona-hiihto.jpeg',
+      title: '',
+      description: 'Cross Country Skiing',
+      category: 'Competition',
+    },
+    {
+      id: 13,
+      src: '/ilona-profile/images/ilona-mattotesti.jpg',
+      title: '',
+      description: 'VO2 max test',
+      category: '',
+    },
   ]
 
   const videos = [
@@ -243,7 +250,7 @@ const MediaGallery: React.FC = () => {
       title: 'Single Scull Training',
       description: '',
       duration: '',
-      category: 'Training',
+      category: '',
       isYoutube: true,
     },
     {
@@ -253,17 +260,17 @@ const MediaGallery: React.FC = () => {
       title: 'Regional Championship Race',
       description: '',
       duration: '',
-      category: 'Training',
+      category: '',
       isYoutube: true,
     },
     {
       id: 3,
-      youtubeId: 'BDsdoWv9r0M',
-      thumbnail: getYouTubeThumbnail('BDsdoWv9r0M'), // Automaattinen YouTube thumbnail
+      youtubeId: 'm241EqAHIn8',
+      thumbnail: getYouTubeThumbnail('m241EqAHIn8'), // Automaattinen YouTube thumbnail
       title: 'EM Beach Sprint competition in Turkey',
       description: '',
       duration: '',
-      category: 'Training',
+      category: '',
       isYoutube: true,
     },
   ]

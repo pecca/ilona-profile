@@ -27,19 +27,6 @@ const IconWrapper = styled(Box)(({ theme }) => ({
 }))
 
 const About: React.FC = () => {
-  const languages: string[] = [
-    'Finnish (Native)',
-    'English (Good)',
-    'Swedish (Basic)',
-  ]
-  const interests: string[] = [
-    'Rowing',
-    'Fitness Training',
-    'Nutrition',
-    'Team Leadership',
-    'Environmental Science',
-  ]
-
   return (
     <Section id="about">
       <Typography
@@ -93,30 +80,6 @@ const About: React.FC = () => {
               </Typography>
             </CardContent>
           </StyledCard>
-        </Grid>
-
-        <Grid item xs={12} md={4}>
-          <Grid container spacing={3}>
-            <Grid item xs={12}>
-              <StyledCard>
-                <CardContent>
-                  <IconWrapper>
-                    <Language />
-                    <Typography variant="h6" component="h3">
-                      Languages
-                    </Typography>
-                  </IconWrapper>
-                  <Box
-                    sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}
-                  >
-                    {languages.map((language, index) => (
-                      <Chip key={index} label={language} variant="outlined" />
-                    ))}
-                  </Box>
-                </CardContent>
-              </StyledCard>
-            </Grid>
-          </Grid>
         </Grid>
       </Grid>
     </Section>
