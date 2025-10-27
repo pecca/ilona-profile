@@ -159,16 +159,10 @@ const Contact: React.FC = () => {
 
   const references = [
     {
-      name: 'Coach Maria Lindström',
-      role: 'Head Coach, Tampere Rowing Club',
-      email: 'maria.lindstrom@rowing.fi',
-      phone: '+358 40 987 6543',
-    },
-    {
-      name: 'Jukka Virtanen',
-      role: 'Athletic Director',
-      email: 'jukka.virtanen@sport.fi',
-      phone: '+358 45 234 5678',
+      name: 'Juho-Pekka Petäjäniemi',
+      role: 'Head Coach, Takon Soutajat Rowing Club',
+      email: 'jp.petajaniemi@gmail.com',
+      phone: '+358 50 511 2327',
     },
   ]
 

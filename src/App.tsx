@@ -164,7 +164,7 @@ const App: React.FC = () => {
           <Athletic />
           <Academic />
           <MediaGallery />
-          <Blog />
+          {/*<Blog />*/}
           <Contact />
         </Box>
       </Container>

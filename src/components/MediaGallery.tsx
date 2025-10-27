@@ -420,16 +420,6 @@ const MediaGallery: React.FC = () => {
         {selectedTab === 1 && renderVideos()}
       </Box>
 
-      <Box sx={{ textAlign: 'center', mt: 4 }}>
-        <Typography variant="body1" color="textSecondary" paragraph>
-          Additional media files including high-resolution photos and
-          full-length videos are available upon request for recruiting purposes.
-        </Typography>
-        <Button variant="outlined" startIcon={<Download />} sx={{ mt: 2 }}>
-          Request Media Package
-        </Button>
-      </Box>
-
       {/* Media Dialog */}
       <Dialog
         open={openDialog}
