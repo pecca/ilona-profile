@@ -257,7 +257,7 @@ const MediaGallery: React.FC = () => {
       id: 2,
       youtubeId: 'OA0CWhY4NV8',
       thumbnail: getYouTubeThumbnail('OA0CWhY4NV8'), // Automaattinen YouTube thumbnail
-      title: 'Regional Championship Race',
+      title: 'Double Scull Training',
       description: '',
       duration: '',
       category: '',
