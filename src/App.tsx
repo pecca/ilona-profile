@@ -142,7 +142,7 @@ const App: React.FC = () => {
         }}
       >
         <img
-          src="/images/single-scull_3.jpg"
+          src="/ilona-profile/images/single-scull_3.jpg"
           alt="Ilona at EM Coastal"
           style={{
             width: '100%',
