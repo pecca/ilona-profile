@@ -106,6 +106,8 @@ const Athletic: React.FC = () => {
     { label: 'Height', value: '175 cm', progress: 85 },
     { label: 'Weight', value: '70 kg', progress: 75 },
     { label: 'Erg 2k PB', value: '7:45.2', progress: 90 },
+    { label: 'VO2 (performance)', value: '59.8 ml/kg/min', progress: 95 },
+    { label: 'VO2 (measured)', value: '53.6 ml/kg/min', progress: 85 },
   ]
 
   return (

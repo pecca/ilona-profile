@@ -130,6 +130,29 @@ const App: React.FC = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Header />
+
+      {/* Hero Image */}
+      <Box
+        sx={{
+          width: '100%',
+          height: { xs: '250px', sm: '350px', md: '450px' },
+          overflow: 'hidden',
+          position: 'relative',
+          mb: 3,
+        }}
+      >
+        <img
+          src="/images/single-scull_3.jpg"
+          alt="Ilona at EM Coastal"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center',
+          }}
+        />
+      </Box>
+
       <Container maxWidth="lg">
         <Box
           sx={{

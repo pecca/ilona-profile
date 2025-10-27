@@ -198,10 +198,10 @@ const MediaGallery: React.FC = () => {
       id: 1,
       youtubeId: '24BjcbchnUA',
       thumbnail: getYouTubeThumbnail('24BjcbchnUA'), // Automaattinen YouTube thumbnail
-      title: 'Stroke Technique Analysis',
-      description: 'Side view analysis of rowing technique',
-      duration: '2:45',
-      category: 'Technique',
+      title: 'Single Scull Training',
+      description: '',
+      duration: '',
+      category: 'Training',
       isYoutube: true,
     },
     {
@@ -209,9 +209,19 @@ const MediaGallery: React.FC = () => {
       youtubeId: 'OA0CWhY4NV8',
       thumbnail: getYouTubeThumbnail('OA0CWhY4NV8'), // Automaattinen YouTube thumbnail
       title: 'Regional Championship Race',
-      description: 'Full race footage from winning performance',
-      duration: '7:30',
-      category: 'Competition',
+      description: '',
+      duration: '',
+      category: 'Training',
+      isYoutube: true,
+    },
+    {
+      id: 3,
+      youtubeId: 'BDsdoWv9r0M',
+      thumbnail: getYouTubeThumbnail('BDsdoWv9r0M'), // Automaattinen YouTube thumbnail
+      title: 'EM Beach Sprint competition in Turkey',
+      description: '',
+      duration: '',
+      category: 'Training',
       isYoutube: true,
     },
   ]
