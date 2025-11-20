@@ -192,49 +192,70 @@ const MediaGallery: React.FC = () => {
       category: 'Competition',
     },
     {
+      id: 5,
+      src: '/images/ilona-coastal-5.jpeg',
+      title: '',
+      description: 'Coastal Rowing',
+      category: 'Competition',
+    },
+    {
+      id: 6,
+      src: '/images/ilona-coastal-6.jpeg',
+      title: '',
+      description: 'Coastal Rowing',
+      category: 'Competition',
+    },
+    {
       id: 7,
+      src: '/images/ilona-coastal-7.jpeg',
+      title: '',
+      description: 'Coastal Rowing',
+      category: 'Competition',
+    },
+    {
+      id: 8,
       src: '/ilona-profile/images/single-scull_1.jpg',
       title: '',
       description: 'National Championships 2025',
       category: 'Competition',
     },
     {
-      id: 8,
+      id: 9,
       src: '/ilona-profile/images/single-scull_2.jpg',
       title: '',
       description: 'National Championships 2025',
       category: 'Competition',
     },
     {
-      id: 9,
+      id: 10,
       src: '/ilona-profile/images/single-scull_3.jpg',
       title: '',
       description: 'National Championships 2025',
       category: 'Competition',
     },
     {
-      id: 10,
+      id: 11,
       src: '/ilona-profile/images/single-scull_4.jpg',
       title: '',
       description: 'National Championships 2025',
       category: 'Competition',
     },
     {
-      id: 11,
+      id: 12,
       src: '/ilona-profile/images/ilona-suunnistus.jpg',
       title: '',
       description: 'Orienteering',
       category: 'Competition',
     },
     {
-      id: 12,
+      id: 13,
       src: '/ilona-profile/images/ilona-hiihto.jpeg',
       title: '',
       description: 'Cross Country Skiing',
       category: 'Competition',
     },
     {
-      id: 13,
+      id: 14,
       src: '/ilona-profile/images/ilona-mattotesti.jpg',
       title: '',
       description: 'VO2 max test',
@@ -245,6 +266,16 @@ const MediaGallery: React.FC = () => {
   const videos = [
     {
       id: 1,
+      youtubeId: 'oaqs1K_xTXQ',
+      thumbnail: getYouTubeThumbnail('oaqs1K_xTXQ'), // Automaattinen YouTube thumbnail
+      title: 'Latest Rowing Video',
+      description: 'Recent rowing performance and training',
+      duration: '',
+      category: 'Training',
+      isYoutube: true,
+    },
+    {
+      id: 2,
       youtubeId: '24BjcbchnUA',
       thumbnail: getYouTubeThumbnail('24BjcbchnUA'), // Automaattinen YouTube thumbnail
       title: 'Single Scull Training',
@@ -254,7 +285,7 @@ const MediaGallery: React.FC = () => {
       isYoutube: true,
     },
     {
-      id: 2,
+      id: 3,
       youtubeId: 'OA0CWhY4NV8',
       thumbnail: getYouTubeThumbnail('OA0CWhY4NV8'), // Automaattinen YouTube thumbnail
       title: 'Double Scull Training',
@@ -264,7 +295,7 @@ const MediaGallery: React.FC = () => {
       isYoutube: true,
     },
     {
-      id: 3,
+      id: 4,
       youtubeId: 'm241EqAHIn8',
       thumbnail: getYouTubeThumbnail('m241EqAHIn8'), // Automaattinen YouTube thumbnail
       title: 'EM Beach Sprint competition in Turkey',
