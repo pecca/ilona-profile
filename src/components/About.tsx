@@ -58,26 +58,74 @@ const About: React.FC = () => {
                 the decision to focus on rowing as my main sport.
               </Typography>
               <Typography variant="body1" paragraph>
-                I started rowing at the age of 13. I enjoy rowing all boat
-                classes in both classic rowing and coastal rowing. I represent
+                I started rowing at the age of 13. I enjoy rowing in all boat
+                classes, both in classic rowing and coastal rowing. I represent
                 the club Takon Soutajat. Last summer, we won the Finnish
-                championship in the eight. I also medaled in the four and the
-                double. In coastal rowing, I was selected to represent Finland
-                at the European Championships in Turkey in the U19 category,
-                where I reached the knock-out stage. It was a very fun
-                experience—I rowed for the first time on ocean waves. The World
-                Coastal Rowing Championships will also be held in Turkey in
-                November 2025, and I will participate there as well.
+                Championship in the eight. I also earned medals in the four and
+                the double. In coastal rowing, I was selected to represent
+                Finland at the European and World Beach Sprint Championships in
+                Turkey in the U19 category. I really enjoyed racing there and
+                gained valuable experience in international competitions.
+              </Typography>
+              <Typography variant="body1" paragraph>
+                So far, I haven’t trained much on the ergo. I did my first 2k
+                ergo test this autumn and finished with a time of 7:39.7. My
+                plan is to start training on the ergo regularly, and I believe I
+                can improve my 2k result significantly during this winter.
               </Typography>
               <Typography variant="body1" paragraph>
                 Currently, I attend Sammon keskuslukio, a sports high school
-                where I’ve learned to balance training and studying. The school
+                where I've learned to balance training and studying. The school
                 allows, for example, morning training sessions before classes. I
                 will graduate in December 2026. In the future, I want to succeed
                 in rowing and pursue a good profession. My goal is to earn a
                 rowing scholarship to the USA, which I believe is the best way
                 to combine both goals.
               </Typography>
+
+              {/* Recruiting Video */}
+              <Box sx={{ mt: 3, textAlign: 'center' }}>
+                <Typography
+                  variant="h6"
+                  component="h4"
+                  gutterBottom
+                  color="primary"
+                >
+                  Recruiting Video
+                </Typography>
+                <Box
+                  sx={{
+                    position: 'relative',
+                    paddingBottom: '56.25%', // 16:9 aspect ratio
+                    height: 0,
+                    overflow: 'hidden',
+                    borderRadius: 2,
+                    boxShadow: 3,
+                  }}
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/V-bFJSizAUA"
+                    title="Recruiting Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      border: 'none',
+                    }}
+                  />
+                </Box>
+                <Typography
+                  variant="body2"
+                  color="textSecondary"
+                  sx={{ mt: 1 }}
+                >
+                  Highlighting skills and achievements for college recruitment
+                </Typography>
+              </Box>
             </CardContent>
           </StyledCard>
         </Grid>
